@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .accordion-item-main h2 button {
+            padding: 5px;
+        }
+        
+        #accordionHead {
+            height: 100%;
+        }
+        
+        .accordion-item-main {
+            height: 100%;
+            background: #448500 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+        
+        .accordion-item-main h2 {
+            height: 100%;
+        }
+        
+        .accordion-item-btn {
+            height: 100%;
+            font-size: 14px;
+            font-family: "Lato", sans-serif;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reports-sidebar">
+        <div class="accordion" id="accordionHead">
+            <div class="accordion-item accordion-item-main">
+                <h2 class="accordion-header bg-secondary" id="headingSub">
+                    <button class="accordion-button btn btn-sm collapsed accordion-item-btn accordion-item-main" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSub" aria-expanded="false" aria-controls="collapseSub">
+                    Reports
+                    </button>
+                </h2>
+                <div id="collapseSub" class="accordion-collapse collapse" aria-labelledby="headingSub" data-bs-parent="#accordionHead">
+                    <div class="accordion-body p-0">
+                        <div class="accordion-item">
+                            <div class="reports">
+                                <div class="accordion " id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header bg-secondary" id="headingOne">
+                                            <button class="accordion-button btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Standard Reports
+                                        </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <ul class="report-options">
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Hardware changes
+                                                        </button>
+                                                    </li>
+
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Device management inventory
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header bg-secondary" id="headingTwo">
+                                            <button class="accordion-button collapsed btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          Custom Reports
+                                        </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <ul class="report-options">
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Hardware changes
+                                                        </button>
+                                                    </li>
+
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Device management inventory
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Search Hardware
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Routine Engine Health
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> SN Exception
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Hardware EOL/EOS
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Logical Interface
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                          Premium reports
+                                        </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <ul class="report-options">
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Hardware changes
+                                                        </button>
+                                                    </li>
+
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Device management inventory
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Search Hardware
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Routine Engine Health
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> SN Exception
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Hardware EOL/EOS
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Logical Interface
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFour">
+                                            <button class="accordion-button collapsed btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFalse">
+                                          Favorites
+                                        </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <ul class="report-options">
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Hardware changes
+                                                        </button>
+                                                    </li>
+
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Device management inventory
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Search Hardware
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Routine Engine Health
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> SN Exception
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Hardware EOL/EOS
+                                                        </button>
+                                                    </li>
+                                                    <li class="p-1">
+                                                        <button class="button">
+                                                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Logical Interface
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
