@@ -166,12 +166,121 @@
         .collapsed+.panel {
             display: none;
         }
+        /* New styles */
+        
+        .pop-up {
+            background-color: #8B8B8B;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 999;
+        }
+        
+        .card {
+            width: 606px;
+            height: 500px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border-radius: 6px;
+        }
+        /* .card-main {
+            margin-top: 70px;
+            margin-bottom: 40px;
+        } */
+        
+        .card-bottom {
+            font-weight: bold;
+            font-family: "Lato", sans-serif;
+            font-size: 18px;
+        }
+        /* Report Subscriptions */
+        /* Report Subscriptions */
+        /* Report Subscriptions */
+        
+        .card-upper-part {
+            padding: 15px 20px 0 20px;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .card-top {
+            border-bottom: 2px solid #174A00;
+        }
+        
+        .card-close {
+            margin: 5px;
+        }
+        
+        .card-main {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 10px;
+            /* overflow-y: scroll; */
+            height: 100%;
+            width: 100%;
+        }
+        
+        .pop-up-heading {
+            font-weight: bold;
+            font-size: 16px;
+            font-family: "Lato", sans-serif;
+            margin-left: 8px;
+        }
+        
+        .card-lower-part {
+            bottom: 0;
+            background-color: #d6d6d6;
+            padding: 10px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            z-index: 800;
+        }
+        
+        .card-bottom div button {
+            margin: 0 5px 0 15px;
+        }
+        
+        .report-sub-list {
+            padding: 0;
+        }
+        
+        .report-sub-item {
+            padding-bottom: 15px;
+        }
+        
+        .form-label {
+            font-weight: bold;
+            font-family: "Lato", sans-serif;
+        }
+        
+        .element-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-check {
+            margin-right: 9px;
+        }
+        
+        .select-checkbox option::before {
+            content: "\2610";
+            width: 1.3em;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .select-checkbox option:checked::before {
+            content: "\2611";
+        }
+        /* Report select */
+        
+        .report-select-drp-content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
-
 
         <div class="navbar d-flex bg-light align-items-center">
 
@@ -391,77 +500,368 @@
 
         </div>
 
+        <div class="pop-up mx-auto d-flex align-items-center w-100">
+            <div class="card mx-auto align-self-center">
+                <!-- Favourited pop up -->
+                <!-- Favourited pop up -->
+                <!-- Favourited pop up -->
+                <!-- 
+                <div class="card-top d-flex">
+                    <div class="ms-auto card-close">
+                        <button class="button"><i class="fa fa-lg fa-times" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="card-main mx-auto">
+                    <svg id="Icon_feather-star" data-name="Icon feather-star" xmlns="http://www.w3.org/2000/svg" width="190" height="180" viewBox="0 0 18.925 17.998">
+                        <path id="Icon_feather-star-2" data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#557C10"/>
+                    </svg>
+                </div>
+                <div class="card-bottom text-center ">
+                    This repord has been added to <br/> your favorites tab
+                </div>
+                -->
+
+                <!-- Report Subscriptions -->
+                <!-- Report Subscriptions -->
+                <!-- Report Subscriptions -->
+                <!--                 
+                <div class="card-upper-part">
+                    <div class="card-top d-flex align-items-center">
+                        <div class="card-heading">
+                            <span><i class="fa fa-lg fa-calendar-o" style="color: #174A00;"></i></span>
+                            <span class="pop-up-heading">Report Subscriptions</span>
+                        </div>
+
+                        <div class="ms-auto card-close">
+                            <button class="button"><i class="fa fa-lg fa-times" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="card-main overflow-auto">
+                        <ul class="report-sub-list">
+                            <li class="report-sub-item d-flex">
+                                <div>Daily_Report_2_03</div>
+                                <div class="ms-auto">
+                                    <button class="button"><i class="fa fa-lg fa-calendar-o" aria-hidden="true"></i></button>
+                                    <button class="button"><i class="fa fa-lg fa-trash-o"></i></i></button>
+                                </div>
+                            </li>
+                            <li class="report-sub-item d-flex">
+                                <div>Daily_Report_2_03</div>
+                                <div class="ms-auto">
+                                    <button class="button"><i class="fa fa-lg fa-calendar-o" aria-hidden="true"></i></button>
+                                    <button class="button"><i class="fa fa-lg fa-trash-o"></i></i></button>
+                                </div>
+                            </li>
+                            <li class="report-sub-item d-flex">
+                                <div>Daily_Report_2_03</div>
+                                <div class="ms-auto">
+                                    <button class="button"><i class="fa fa-lg fa-calendar-o" aria-hidden="true"></i></button>
+                                    <button class="button"><i class="fa fa-lg fa-trash-o"></i></i></button>
+                                </div>
+                            </li>
+                            <li class="report-sub-item d-flex">
+                                <div>Daily_Report_2_03</div>
+                                <div class="ms-auto">
+                                    <button class="button"><i class="fa fa-lg fa-calendar-o" aria-hidden="true"></i></button>
+                                    <button class="button"><i class="fa fa-lg fa-trash-o"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="card-lower-part">
+                    <div class="card-bottom bottom-0 text-end d-flex">
+                        <div class="ms-auto">
+                            <button type="button" class="btn btn-outline-dark">Cancel</button>
+                            <button type="button" class="btn btn-dark ">Create New</button>
+                        </div>
+
+                    </div>
+
+                </div>     
+                -->
+                <!-- Report form -->
+                <!-- Report form -->
+                <!-- Report form -->
+                <div class="card-upper-part">
+                    <div class="card-top d-flex align-items-center">
+                        <div class="card-heading">
+                            <span><i class="fa fa-lg fa-calendar-o" style="color: #174A00;"></i></span>
+                            <span class="pop-up-heading">Report Subscriptions</span>
+                        </div>
+
+                        <div class="ms-auto card-close">
+                            <button class="button"><i class="fa fa-lg fa-times" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="card-main">
+                        <form>
+                            <div class="element-group">
+                                <label for="subscriptionName" class="form-label">Subscription Name</label>
+                                <input type="text" class="form-control" id="subscriptionName" placeholder="Enter the name of the subscription. This will be subject of the email.">
+                            </div>
+                            <div class="element-group">
+                                <label for="recipients" class="form-label">Recipients</label>
+                                <input type="text" class="form-control" id="recipients" placeholder="Enter the email addresses of the recipents">
+                            </div>
+
+                            <!-- Report select -->
+                            <div class="element-group">
+                                <label for="reportSelect" class="form-label">Reports</label>
+                                <div class="btn-group d-flex">
+                                    <button type="button" class="btn border w-100 report-select-drp overflow-hidden d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <p class="me-auto m-0 report-select-drp-content">Select Report</p>
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu border px-3 w-100">
+                                        <li>
+                                            <input type="checkbox" name="hardware" class="hardwareCB">
+                                            <label for="hardware">Hardware changes</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="device" class="deviceCB">
+                                            <label for="dmc">Device management inventory</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="searchHardware" class="searchHardwareCB">
+                                            <label for="searchHardware">Search Hardware</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="routine" class="routineCB">
+                                            <label for="routine">Routine engine Hardware</label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- End of Report select -->
+                            <div class="element-group d-flex justify-content-between">
+                                <div>
+                                    <div>
+                                        <label class="form-label">Export format</label>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="export" id="exportPDF">
+                                            <label class="form-check-label" for="exportPDF">PPT</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="export" id="exportPPT" checked>
+                                            <label class="form-check-label" for="exportPPT">PPT</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label class="form-label">Frequency</label>
+                                    </div>
+                                    <div class="d-flex justify-content-between w-100">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="frequency" id="frequencyDaily" onchange="frequencyChange()" checked>
+                                            <label class="form-check-label" for="frequencyDaily">Daily</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="frequency" id="frequencyWeekly" onchange="frequencyChange()">
+                                            <label class="form-check-label" for="frequencyWeekly">Weekly</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="frequency" id="frequencyMonthly" onchange="frequencyChange()">
+                                            <label class="form-check-label" for="frequencyMonthly">Monthly</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element-group frequencyWeeklyComponents d-none">
+                                <label for="weekSelect" class="form-label">Week</label>
+                                <select class="form-select" id="weekSelect">
+                                    <option selected>Select the week</option>
+                                    <option value="1">Monday</option>
+                                    <option value="2">Tuseday</option>
+                                    <option value="3">Wednesday</option>
+                                    <option value="4">Thursday</option>
+                                    <option value="5">Friday</option>
+                                    <option value="6">Saturday</option>
+                                    <option value="7">Sunday</option>
+                                  </select>
+                            </div>
+                            <div class="element-group frequencyMonthlyComponents d-flex justify-content-between d-none">
+                                <div class="w-100 me-3">
+                                    <label for="weekSelect" class="form-label">Week</label>
+                                    <select class="form-select" id="weekSelect">
+                                    <option selected>Select the week</option>
+                                    <option value="1">Monday</option>
+                                    <option value="2">Tuseday</option>
+                                    <option value="3">Wednesday</option>
+                                    <option value="4">Thursday</option>
+                                    <option value="5">Friday</option>
+                                    <option value="6">Saturday</option>
+                                    <option value="7">Sunday</option>
+                                  </select>
+                                </div>
+                                <div class="w-100 mr-e">
+                                    <label for="daySelect" class="form-label">Day</label>
+                                    <select class="form-select" id="daySelect">
+                                    <option selected>Select the day</option>
+                                    <option value="1">Monday</option>
+                                    <option value="2">Tuseday</option>
+                                    <option value="3">Wednesday</option>
+                                    <option value="4">Thursday</option>
+                                    <option value="5">Friday</option>
+                                    <option value="6">Saturday</option>
+                                    <option value="7">Sunday</option>
+                                </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="card-lower-part">
+                    <div class="card-bottom bottom-0 text-end d-flex">
+                        <div class="ms-auto">
+                            <button type="button" class="btn btn-outline-dark">Cancel</button>
+                            <button type="button" class="btn btn-dark ">Submit</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div style="width: 100vh;height: 600px;background-color: #DBDBDB; ">
+            LWC
+        </div>
+
     </div>
 
     <script>
-        var Hamburger = document.querySelector(".Hamburger");
-        var sideBar = document.querySelector(".reports-sidebar");
-        var closeSideBar = document.querySelector(".close-sidebar")
+        var Hamburger = document.querySelector(".Hamburger ");
+        var sideBar = document.querySelector(".reports-sidebar ");
+        var closeSideBar = document.querySelector(".close-sidebar ")
 
-        var switchAccounts = document.querySelector(".user-dropdown");
+        var switchAccounts = document.querySelector(".user-dropdown ");
         var switchAccountShow = false;
         // Hamburger.onclick = () => {
-        //     sideBar.style.display = "block";
+        //     sideBar.style.display = "block ";
         // };
         // closeSideBar.onclick = () => {
-        //     sideBar.style.display = "none";
+        //     sideBar.style.display = "none ";
         // };
 
 
-        // var userIcon = document.querySelector(".user-badge");
+        // var userIcon = document.querySelector(".user-badge ");
         // userIcon.onclick = () => {
         //     if (switchAccountShow) {
-        //         switchAccounts.style.display = "none";
+        //         switchAccounts.style.display = "none ";
         //         switchAccountShow = false;
         //     } else {
-        //         switchAccounts.style.display = "inline-block"
+        //         switchAccounts.style.display = "inline-block "
         //         switchAccountShow = true;
         //     }
         // };
 
-        var accMain = document.querySelector(".accordion-main");
+        var accMain = document.querySelector(".accordion-main ");
 
-        var acc = document.getElementsByClassName("accordion-sub");
+        var acc = document.getElementsByClassName("accordion-sub ");
         var i;
 
         var toggleAcc = function() {
 
 
             var panel = this.nextElementSibling;
-            var prev = document.querySelector(".show");
+            var prev = document.querySelector(".show ");
 
             if (prev != null) {
-                prev.classList.toggle("show");
-                prev.classList.toggle("collapsed");
-                prev.nextElementSibling.style.display = "none";
+                prev.classList.toggle("show ");
+                prev.classList.toggle("collapsed ");
+                prev.nextElementSibling.style.display = "none ";
             }
 
             if (prev != this) {
-                this.classList.toggle("show");
-                this.classList.toggle("collapse");
+                this.classList.toggle("show ");
+                this.classList.toggle("collapse ");
 
 
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
+                if (panel.style.display === "block ") {
+                    panel.style.display = "none ";
                 } else {
-                    panel.style.display = "block";
+                    panel.style.display = "block ";
                 }
             }
         }
 
-        accMain.addEventListener("click", () => {
-            accMain.lastElementChild.classList.toggle("rotate");
+        accMain.addEventListener("click ", () => {
+            accMain.lastElementChild.classList.toggle("rotate ");
             var panel = accMain.nextElementSibling;
 
-            if (panel.style.display === "block")
-                panel.style.display = "none";
+            if (panel.style.display === "block ")
+                panel.style.display = "none ";
             else
-                panel.style.display = "block";
+                panel.style.display = "block ";
         });
 
         for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", toggleAcc);
+            acc[i].addEventListener("click ", toggleAcc);
         }
+
+        // Frequency subscription
+        // Frequency subscription
+        // Frequency subscription
+        var frequencyChange = () => {
+            var weekly = document.querySelector(".frequencyWeeklyComponents");
+            var monthly = document.querySelector(".frequencyMonthlyComponents");
+            if (document.querySelector("#frequencyDaily").checked) {
+                monthly.classList.add("d-none")
+                weekly.classList.add("d-none")
+            } else if (document.querySelector("#frequencyWeekly").checked) {
+                weekly.classList.remove("d-none")
+                monthly.classList.add("d-none")
+            } else {
+                weekly.classList.add("d-none")
+                monthly.classList.remove("d-none")
+            }
+        };
+
+        // Report select
+        var hardwareCB = document.querySelector(".hardwareCB");
+        var deviceCB = document.querySelector(".deviceCB");
+        var searchHardwareCB = document.querySelector(".searchHardwareCB");
+        var routineCB = document.querySelector(".routineCB");
+
+
+        var reportSelect = () => {
+            var reportSelectDrp = document.querySelector(".report-select-drp-content");
+            var res = [];
+            if (hardwareCB.checked)
+                res.push("Hardware Changes");
+            if (deviceCB.checked)
+                res.push("Device management Inventory");
+            if (searchHardwareCB.checked)
+                res.push("Search Hardware");
+            if (routineCB.checked)
+                res.push("Routine engine Hardware");
+            if (res.length > 0)
+                reportSelectDrp.innerText = res.join(", ");
+            else
+                reportSelectDrp.innerHTML = "Report select";
+
+
+        }
+
+        hardwareCB.addEventListener('change', reportSelect);
+        deviceCB.addEventListener('change', reportSelect);
+        searchHardwareCB.addEventListener('change', reportSelect);
+        routineCB.addEventListener('change', reportSelect);
     </script>
 </body>
 

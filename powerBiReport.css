@@ -1,0 +1,270 @@
+.container-fluid{
+  width: 100%;
+  margin-top: 20px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.reports-sidebar {
+  width: 350px;
+}
+
+.reports-header {
+  background-color: rgb(74, 139, 74);
+}
+
+.report-options {
+  list-style: none;
+  background: white;
+}
+
+.button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+.navbar {
+  top: 10px;
+  height: 55px;
+  padding: 0;
+  background: #F2F2F2;
+}
+.bg-light {
+  background-color: #F2F2F2;
+}
+
+.export:nth-child(2) {
+  background-color: #FFFFFF;
+  /* background: transparent url('img/Icon awesome-file-export.png') 0% 0% no-repeat padding-box; */
+}
+
+.export {
+  height: 33px;
+  border: 1px solid #557C10;
+  border-radius: 2px;
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+}
+
+.export div:first-child {
+  background: #448500 0% 0% no-repeat padding-box;
+  height: 33px;
+  color: #FFFFFF;
+  padding: 0 5px 0 8px;
+}
+
+.sep {
+  margin: 0 10px 0 10px;
+  font-size: x-large;
+  opacity: 50%;
+}
+
+.fav {
+  background: #448500 0% 0% no-repeat padding-box;
+  height: 33px;
+  width:150px;
+  padding: 0 2px 0 2px;
+  box-shadow: 8px 3px 25px #DBDBDB;
+  border-radius: 2px;
+}
+
+.fav button {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+.accordion-main {
+  background: #448500 0% 0% no-repeat padding-box;
+  color: #FFFFFF;
+  font-size: 15px;
+  height: 55px;
+  
+   /* height modified from 64 to 44 */
+}
+
+.accordion-child{
+  top:55px;
+  z-index: 1;
+}
+
+
+.accordion-sub {
+  background: #F4F6F2 0% 0% no-repeat padding-box;
+  box-shadow: 2px 3px 4px #0000001A;
+  color: #231F20;
+  font-size: 15px;
+  height: 62px;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  width: 100%;
+}
+
+.accordion-sub.active {
+  /* background-color: #ccc; */
+  border-left: 4px solid #174A00;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.panel {
+  display: none;
+  width: 350px;
+}
+
+.calendar {
+  margin-left: 23px;
+  margin-right: 23px;
+}
+
+.caret {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.accordion p:first-child {
+  padding-left: 25px;
+}
+
+.report-option {
+  padding-left: 25px;
+  height: 42px;
+  width: 100%;
+}
+
+.report-option button {
+  width: 100%;
+}
+
+.report-star{
+  width: 24px;
+  margin-left: 12px;
+  opacity: 0%;
+}
+
+.report-star-always-fav{
+  width: 24px;
+  margin-left: 25px;
+}
+
+.show {
+  border-left: 4px solid #174A00;
+}
+
+.show+.panel {
+  display: block;
+}
+
+.show .caret {
+  transform: rotate(180deg);
+}
+
+.collapsed+.panel {
+  display: none;
+}
+.me-auto {
+  margin-right: auto!important;
+}
+
+.report{
+  width: 80%;
+  text-align: left;
+}
+
+.report-option:hover {
+  background: #F4F6F2;
+  background-size: 60% 70%;
+}
+
+.report-option:hover .report-star{
+  stroke: green;
+  opacity: 40%;
+}
+
+.star.button,.cross.button{
+width: 100%;
+height: 100%;
+}
+
+.unfav{
+  font-family: "Lato", sans-serif;
+    font-size: 13px;
+    background: white;
+    color: #000000;
+    text-align-last: justify;
+    /* top: 285px;
+    left: 1506px; */
+    height: 33px;
+    width:150px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 8px 3px 25px #DBDBDB;
+    border: 1px solid #080707;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.cross.symbol{
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* .parent-caret{
+  margin-top: -3.25px!important;
+} */
+.fill-fav{
+  fill:#84B135;
+}
+
+.always-fav{
+  fill: #84B135;
+  opacity: 100%;
+  stroke: none;
+}
+
+/* Styles for Pop up favorites */
+.pop-up {
+  display: none;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  position: absolute;
+}
+
+.card {
+  width: 500px;
+  height: 500px;
+  top: 110px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+}
+
+.blur{
+  filter: blur(5px);
+}
+
+.card-close {
+  margin: 25px;
+}
+
+.card-main {
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.card-bottom {
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}

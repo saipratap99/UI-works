@@ -1,0 +1,295 @@
+<template>
+  
+  <div class="container-fluid">
+
+    <div class="navbar d-flex align-items-center">
+
+        <div class="reports-sidebar">
+
+            <!-- Replaced <button onclick={parentDropdownClicked} class="accordion accordion-main d-flex align-items-center collapsed"> -->
+            <button onclick=parentDropdownClicked() class="accordion accordion-main d-flex align-items-center collapsed">
+                <p class="me-auto my-0 w-75">
+                    Reports
+                </p>
+                <!-- <p class="calendar my-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 1 20.291 22.323">
+                    <g id="Icon_feather-calendar" data-name="Icon feather-calendar" transform="translate(1 1)">
+                      <path id="Path_512" data-name="Path 512" d="M6.532,6H20.759a2.032,2.032,0,0,1,2.032,2.032V22.259a2.032,2.032,0,0,1-2.032,2.032H6.532A2.032,2.032,0,0,1,4.5,22.259V8.032A2.032,2.032,0,0,1,6.532,6Z" transform="translate(-4.5 -3.968)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      <path id="Path_513" data-name="Path 513" d="M24,3V7.065" transform="translate(-10.79 -3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      <path id="Path_514" data-name="Path 514" d="M12,3V7.065" transform="translate(-6.919 -3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      <path id="Path_515" data-name="Path 515" d="M4.5,15H22.791" transform="translate(-4.5 -6.871)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </g>
+                  </svg>
+                </p> -->
+                <p class="caret my-0 parent-caret">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11">
+                        <path id="Polygon_1" data-name="Polygon 1" d="M6.578.663a.5.5,0,0,1,.844,0l6.089,9.569a.5.5,0,0,1-.422.768H.911a.5.5,0,0,1-.422-.768Z" fill="#fff"></path>
+                    </svg>                      
+                </p> 
+            </button>
+            <div class="panel position-absolute accordion-child">
+
+                <button onclick={childDropdownClicked} class="accordion accordion-sub d-flex align-items-center show">
+                    <p class="me-auto my-0">
+                        Favorites
+                    </p>
+                    <p class="caret my-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11">
+                            <path data-name="Polygon 1" d="M6.578.663a.5.5,0,0,1,.844,0l6.089,9.569a.5.5,0,0,1-.422.768H.911a.5.5,0,0,1-.422-.768Z" fill="#174a00"></path>
+                        </svg>                                                 
+                    </p> 
+                </button>
+                <div class="panel">
+                    <ul class="report-options px-0 my-0">
+
+                      <!-- <template if:true={dataReady}> -->
+                        <!-- <template for:each={favorite_report_names} for:item="item"> -->
+
+                          <!-- Replaced <li key = {item} class="report-option d-flex align-items-center refresh-item"> -->
+                            <li class="report-option d-flex align-items-center refresh-item">
+                            <!-- <button onclick={reportClicked} class="button text-start d-flex align-items-center"> -->
+                                <button onclick=reportClicked() class="button text-start d-flex align-items-center"></button>
+                                
+                              <i class="fa fa-bar-chart" aria-hidden="true"></i> <span data-id = {item} class="mx-1 report">{item}</span>
+                              <i class="ms-auto ml-3" >
+                                  <svg data-id="Icon_feather-star" data-name="Icon feather-star" xmlns="http://www.w3.org/2000/svg" width="18.925" height="17.998" viewBox="0 0 18.925 17.998">
+                                    <!-- Replaced <path onclick={favoriteIconClicked} class="favorite-icon fill-fav" data-id={item} data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path>   -->
+                                    <path onclick=favoriteIconClicked() class="favorite-icon fill-fav" data-id={item} data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path>
+                                  </svg>                                      
+                              </i>
+                          </button>
+                          </li>
+                          
+                        <!-- </template> -->
+<!-- </template> -->
+
+</ul>
+</div>
+
+<!-- Replaced <button onclick={childDropdownClicked} class="accordion accordion-sub d-flex align-items-center collapsed"> -->
+<button onclick=childDropdownClicked() class="accordion accordion-sub d-flex align-items-center collapsed"></button>
+<p class="me-auto my-0">
+    Custom Reports
+</p>
+<p class="caret my-0">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11">
+                            <path data-name="Polygon 1" d="M6.578.663a.5.5,0,0,1,.844,0l6.089,9.569a.5.5,0,0,1-.422.768H.911a.5.5,0,0,1-.422-.768Z" fill="#174a00"></path>
+                        </svg>
+</p>
+</button>
+<div class="panel">
+    <ul class="report-options px-0 my-0">
+
+
+        <!-- <template if:true={dataReady}> -->
+        <!-- <template for:each={custom_reports} for:item="item"> -->
+
+        <!-- Replaced <li key={ item} class="report-option d-flex align-items-center"> -->
+        <li class="report-option d-flex align-items-center">
+
+            <!-- Replaced <button onclick={reportClicked} class="button text-start d-flex align-items-center"> -->
+            <button onclick=reportClicked() class="button text-start d-flex align-items-center">
+
+                                
+                              <i class="fa fa-bar-chart" aria-hidden="true"></i> 
+                              <!-- Replaced <span data-id = {item} class="mx-1 report">{item}</span> -->
+                              <span class="mx-1 report">item</span>
+                              <i class="ms-auto report-star " >
+                                  <svg data-id="Icon_feather-star" data-name="Icon feather-star" xmlns="http://www.w3.org/2000/svg" width="18.925" height="17.998" viewBox="0 0 18.925 17.998">
+                                    <!-- Replaced <path onclick={favoriteIconClicked} data-id={item} class="favorite-icon" data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path>   -->
+                                    <path onclick=favoriteIconClicked() data-id={item} class="favorite-icon" data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path>
+                                  </svg>                                      
+                              </i>
+                          </button>
+        </li>
+
+        <!-- </template> -->
+        <!-- </template> -->
+
+    </ul>
+</div>
+
+<!-- Replaced <button onclick={childDropdownClicked} class="accordion accordion-sub d-flex align-items-center collapsed"> -->
+<button onclick=childDropdownClicked() class="accordion accordion-sub d-flex align-items-center collapsed">
+
+                    <p class="me-auto my-0">
+                        Standard Reports
+                    </p>
+                    <p class="caret my-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11">
+                            <path data-name="Polygon 1" d="M6.578.663a.5.5,0,0,1,.844,0l6.089,9.569a.5.5,0,0,1-.422.768H.911a.5.5,0,0,1-.422-.768Z" fill="#174a00"></path>
+                        </svg>                                                 
+                    </p> 
+                </button>
+<div class="panel">
+    <ul class="report-options px-0 my-0">
+
+        <!-- <template if:true={dataReady}> -->
+        <!-- <template for:each={standard_reports} for:item="item"> -->
+
+        <!-- Replaced <li key={ item} class="report-option d-flex align-items-center"> -->
+        <li class="report-option d-flex align-items-center">
+
+            <!-- Replaced <button onclick={reportClicked} class="button text-start d-flex align-items-center"> -->
+            <button onclick=reportClicked() class="button text-start d-flex align-items-center">
+                                
+                              <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                               <!-- Replaced <span data-id = {item} class="mx-1 report">{item}</span> -->
+                               <span class="mx-1 report">item</span>
+
+                              <i class="ms-auto report-star " >
+                                  <svg data-id="Icon_feather-star" data-name="Icon feather-star" xmlns="http://www.w3.org/2000/svg" width="18.925" height="17.998" viewBox="0 0 18.925 17.998">
+                                      <!-- Replaced <path onclick={favoriteIconClicked} data-id={item} class="favorite-icon" data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path> -->
+                                      <path onclick=favoriteIconClicked() data-id={item} class="favorite-icon" data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path>
+                                  </svg>                                      
+                              </i>
+                          </button>
+        </li>
+
+        <!-- </template> -->
+        <!-- </template> -->
+
+    </ul>
+</div>
+
+
+<!-- Replaced <button onclick={childDropdownClicked} class="accordion accordion-sub d-flex align-items-center collapsed"> -->
+<button onclick=childDropdownClicked() class="accordion accordion-sub d-flex align-items-center collapsed">
+                    <p class="me-auto my-0">
+                        Premium Reports
+                    </p>
+                    <p class="caret my-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11">
+                            <path data-name="Polygon 1" d="M6.578.663a.5.5,0,0,1,.844,0l6.089,9.569a.5.5,0,0,1-.422.768H.911a.5.5,0,0,1-.422-.768Z" fill="#174a00"></path>
+                        </svg>                                                 
+                    </p> 
+                </button>
+<div class="panel">
+    <ul class="report-options px-0 my-0">
+
+
+        <!-- <template if:true={dataReady}> -->
+        <!-- <template for:each={premium_reports} for:item="item"> -->
+
+        <!-- Replaced <li key={ item} class="report-option d-flex align-items-center"> -->
+        <li class="report-option d-flex align-items-center">
+
+            <!-- Replaced <button onclick={reportClicked} class="button text-start d-flex align-items-center"> -->
+            <button onclick=reportClicked() class="button text-start d-flex align-items-center">
+            
+                                
+                              <i class="fa fa-bar-chart" aria-hidden="true"></i> 
+                              <!-- Replaced <span data-id = {item} class="mx-1 report">{item}</span> -->
+                              <span class="mx-1 report">item</span>
+
+                              <i class="ms-auto report-star " >
+                                  <svg data-id="Icon_feather-star" data-name="Icon feather-star" xmlns="http://www.w3.org/2000/svg" width="18.925" height="17.998" viewBox="0 0 18.925 17.998">
+                                    <!-- Replaced <path onclick={favoriteIconClicked} data-id={item} class="favorite-icon" data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path> -->
+                                      
+                                    <path onclick=favoriteIconClicked() data-id={item} class="favorite-icon" data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path>
+                                  </svg>                                      
+                              </i>
+                          </button>
+        </li>
+
+        <!-- </template> -->
+        <!-- </template> -->
+
+    </ul>
+</div>
+</div>
+</div>
+
+<div class="fav-export d-flex align-items-center">
+    <!-- <template if:true={current_report_favorite}> -->
+    <div class="unfav d-flex align-items-center">
+        <!-- Replaced <button class="cross button" onclick={remAsFav}> -->
+        <button class="cross button" onclick=remAsFav()>
+                  <span class="cross symbol">X  </span>                          
+                  <span>Remove as Favorite</span>
+              </button>
+    </div>
+    <!-- </template> -->
+
+    <!-- <template if:false={current_report_favorite}> -->
+    <div class="fav d-flex align-items-center">
+        <!-- Replaced <button class="star button" onclick={addToFav}> -->
+        <button class="star button" onclick=addToFav()>
+                  <svg data-name="Icon feather-star" xmlns="http://www.w3.org/2000/svg" width="18.925" height="17.998" viewBox="0 1 18 21">
+                      <path data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#fff"></path>
+                  </svg>                          
+                  <span class="px-1">Add to Favorites</span>
+              </button>
+    </div>
+    <!-- </template> -->
+
+    <div class="sep">|</div>
+    <div class="d-flex export align-items-center">
+        <div class="d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.343" height="15.417" viewBox="0 0 17.343 15.417">
+                            <path id="Icon_awesome-file-export" data-name="Icon awesome-file-export" d="M11.563,3.671a.72.72,0,0,0-.211-.509L8.4.211A.722.722,0,0,0,7.892,0H7.708V3.854h3.854Zm5.631,5.6-2.882-2.9a.483.483,0,0,0-.825.34v1.96H11.56V10.6h1.927v1.963a.483.483,0,0,0,.825.34L17.194,10A.513.513,0,0,0,17.194,9.274Zm-11.412.843V9.154a.483.483,0,0,1,.482-.482h5.3V4.818h-4.1A.725.725,0,0,1,6.745,4.1V0H.723A.721.721,0,0,0,0,.723V14.694a.721.721,0,0,0,.723.723H10.84a.721.721,0,0,0,.723-.723V10.6h-5.3A.483.483,0,0,1,5.781,10.117Z" fill="#fff"></path>
+                        </svg>
+            <span class="px-1">Export to</span>
+        </div>
+
+        <div>
+            <!-- Replaced <button onclick={exportToPPT} class="ppt button"> -->
+            <button onclick=exportToPPT() class="ppt button">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19.289" height="17.144" viewBox="0 0 19.289 17.144">
+                            <path id="PowerPoint_64x" d="M10.715,4A8.56,8.56,0,0,0,3.682,7.674H.816A.816.816,0,0,0,0,8.49v8.164a.816.816,0,0,0,.816.816H3.682A8.572,8.572,0,1,0,10.715,4Zm.306.62a7.968,7.968,0,0,1,7.646,7.646H11.021Zm-.612,0v7.646H9.8V8.49a.816.816,0,0,0-.816-.816H4.449a7.95,7.95,0,0,1,5.96-3.054Zm.306,15.911a7.947,7.947,0,0,1-6.266-3.061h4.53a.816.816,0,0,0,.818-.816l-.007-3.783h8.878A7.975,7.975,0,0,1,10.715,20.531ZM2.84,15.3V9.842H4.972a2.184,2.184,0,0,1,1.467.444,1.623,1.623,0,0,1,.518,1.29,1.834,1.834,0,0,1-.254.961,1.726,1.726,0,0,1-.722.656,2.384,2.384,0,0,1-1.071.232H4V15.3Zm1.952-2.84a1.041,1.041,0,0,0,.715-.214.811.811,0,0,0,.234-.63c0-.538-.3-.8-.918-.8H4v1.645Z" transform="translate(0 -4)"></path>
+                        </svg>                              
+                        <span class="px-1">PPT</span>
+                    </button>
+            <!-- <button onclick={exportToPDF} class="pdf button"> -->
+            <button onclick=exportToPDF() class="pdf button">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <text id="_" data-name="" transform="translate(0 16)" font-size="16" font-family="SegoeMDL2Assets, Segoe MDL2 Assets"><tspan x="0" y="0"></tspan></text>
+                        </svg>
+                          
+                        <span class="px-1"> PDF </span>
+                    </button>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+</div>
+<div class="pop-up mx-auto align-items-center w-100">
+    <div class="card mx-auto align-self-center">
+        <div class="card-top d-flex">
+            <div class="ms-auto card-close">
+                <button onclick={closeFav} class="button">X</button>
+            </div>
+        </div>
+        <div class="card-main mx-auto">
+            <svg id="Icon_feather-star" data-name="Icon feather-star" xmlns="http://www.w3.org/2000/svg" width="190" height="180" viewBox="0 0 18.925 17.998">
+              <path id="Icon_feather-star-2" data-name="Icon feather-star" d="M12.463,3l2.924,5.924,6.539.956-4.731,4.608L18.311,21l-5.848-3.075L6.615,21l1.117-6.51L3,9.879l6.539-.956Z" transform="translate(-3 -3)" fill="#557C10"></path>>
+          </svg>
+        </div>
+        <div class="card-bottom text-center ">
+            This report has been added<br/>to your favorites tab.
+        </div>
+    </div>
+</div>
+
+<!-- div component for Power BI Embedding -->
+<div class="slds-m-around_medium embed">
+    <!-- <template if:true={report.data}> -->
+    <!-- <template if:true={report.data.error}> -->
+    <!-- <div>{report.data.error}</div> -->
+    <!-- </template> -->
+    <!-- </template> -->
+    <!-- <template if:true={report.data}> -->
+    <!-- <template if:true={report.data.embedUrl}> -->
+    <div data-id="embed-container" style="height: 720px"></div>
+    <!-- </template> -->
+    <!-- </template> -->
+</div>
+
+
+</template>
